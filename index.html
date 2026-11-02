@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan - Kevin & Michelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header-container"></div>
+  <main id="app"></main>
+  <audio id="bgMusic" loop>
+    <source src="aset/lagu.mp3" type="audio/mpeg">
+</audio>
+
+  <div id="gift-modal" class="modal hidden">
+    <div class="modal-box">
+      <button class="modal-x" onclick="closeGiftModal()" aria-label="Tutup"><i data-lucide="x"></i></button>
+      <i data-lucide="gift" class="modal-ico"></i>
+      <h3 class="script">Tanda Kasih</h3>
+      <p class="small">Terima kasih atas doa restu dan perhatian Bapak/Ibu/Saudara/i.</p>
+      <div class="acc">
+        <b id="modal-bank-name"></b>
+        <p id="modal-account-number" class="num"></p>
+        <p class="small">a.n. <span id="modal-account-holder"></span></p>
+        <button class="pill" onclick="copyAccount()"><i data-lucide="copy"></i> Salin Nomor Rekening</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"><i data-lucide="check-circle-2"></i><span></span></div>
+  <script src="script.js"></script>
+</body>
+</html>
