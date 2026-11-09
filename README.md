@@ -1,4 +1,4 @@
-Projek DPW Kelompok 6
+Projek Undangan DPW Kelompok 6
 Anggota Kelompok:
 1. Epifanius Daeli (25071207144)
 2. Herawati Siregar (25071206988)
