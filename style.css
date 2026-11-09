@@ -1,3 +1,4 @@
+/* Pengaturan variabel warna, font, dan tema utama */
 :root{
   --maroon:#2e0810; --maroon-d:#2e0810; --maroon-l:#510012;
   --gold:#f8ce46; --gold-l:#f3e5ab; --cream:#faf5ec; --ink:#3a0a12;
@@ -6,6 +7,8 @@
   
 }
 
+
+/* Mengatur seluruh elemen agar memiliki ukuran dan jarak awal yang seragam */
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--maroon-d);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -19,7 +22,7 @@ i[data-lucide],svg.lucide{width:1em;height:1em;vertical-align:-.12em}
 .glow{color:var(--gold-l);text-shadow:0 0 14px rgba(243,229,171,.55)}
 .small{font-size:.8rem;opacity:.85}
 
-/* Tombol pil krem ala mockup */
+/* Mengatur tombol berbentuk pil dengan warna krem dan garis emas */
 .pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--cream);color:var(--maroon);border:2px solid var(--gold);border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.85rem;box-shadow:0 0 14px rgba(243,229,171,.45);transition:transform .2s}
 .pill:hover{transform:translateY(-2px)}
 .pill .dot{display:grid;place-items:center;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--maroon);color:var(--cream)}
@@ -33,7 +36,7 @@ i[data-lucide],svg.lucide{width:1em;height:1em;vertical-align:-.12em}
 .tb-btn.on{background:var(--gold);color:var(--maroon-d)}
 .tb-btn.danger{color:#fda4af;border-color:#4a0e17}
 
-/* Cover: tirai + batik */
+/* Mengatur halaman pembuka atau cover undangan */
 .cover{
     position: fixed;
     inset: 0;
@@ -50,6 +53,7 @@ i[data-lucide],svg.lucide{width:1em;height:1em;vertical-align:-.12em}
 
     transition: transform .9s cubic-bezier(.7,0,.2,1);
 }
+
 .cover.open{transform:translateY(-100%)}
 .cover::before{content:"";position:absolute;inset:0;opacity:.14;background:
   radial-gradient 31px 32px,transparent 33px;
@@ -66,12 +70,13 @@ i[data-lucide],svg.lucide{width:1em;height:1em;vertical-align:-.12em}
 
 /* Layout split: foto kiri (sticky) + panel kanan */
 .stage{display:flex;align-items:flex-start}
-.photo{position:sticky;top:0;flex:0 0 57%;height:100vh;background:#200 url('aset/coverfinal.jpeg') center/cover;overflow:hidden}
-.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.15) 55%,rgba(0,0,0,.35))}
-.photo-cap{position:absolute;z-index:2;left:0;right:0;bottom:12%;text-align:center;color:#fff}
+.photo{position:sticky;top:0;flex:0 0 57%;height:100vh;background:#200 url('aset/coverfinal.png') center/cover;overflow:hidden}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35),rgba(0,0,0,0) 40%)}
+.photo-cap{text-shadow:0 2px 10px rgba(0,0,0,.6);position:absolute;z-index:2;left:0;right:0;bottom:12%;text-align:center;color:#fff}
 .photo-cap i{font-family:var(--script);font-style:normal;font-size:1.6rem;display:block}
 .photo-cap b{font-family:var(--script);font-weight:400;font-size:clamp(2.6rem,5vw,4rem);line-height:1.1}
 .panel{flex:1;min-width:0}
+
 
 .sec{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2.5rem 1.6rem;position:relative;
   background-color:var(--maroon);background-image:radial-gradient(rgba(212,175,55,.09) 1px,transparent 1.5px);background-size:22px 22px;border-left:1px solid var(--gold)}
